@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block head_title %} {{object.nome}} - Fazentech {% endblock %}
+
+
+<!--body-->
+{% block content %}
+    <p>produto: {{ object.nome }}</p>
+    <p>descricao: {{ object.descricao }}</p>
+    <p>preço: R${{ object.preco }}</p>
+    {% if object.disponibilidade %}
+        disponibilidade: sim
+    {% else %}
+        disponibilidade: não
+    {% endif %}
+{% endblock %}

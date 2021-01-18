@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block head_title %}Produtos - Fazentech{% endblock %}
+
+<!--body-->
+{% block content %}
+
+    <h2>Produtos</h2>
+    {% for produto in produtos %}
+        <p>
+            <a href="{{ produto.get_absolute_url }}">{{ produto.nome }}</a>
+        </p>
+    {% endfor %}
+    
+{% endblock %}
