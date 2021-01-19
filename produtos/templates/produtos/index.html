@@ -4,6 +4,10 @@
 <!--body-->
 {% block content %}
 
+    <!--link abrir formulario-->
+    <a href="{% url 'produtos:adicionar' %}">adicionar</a>
+    
+    <!--listando todos os produtos-->
     <h2>Produtos</h2>
     {% for produto in produtos %}
         <p>

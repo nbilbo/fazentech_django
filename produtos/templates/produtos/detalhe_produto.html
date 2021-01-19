@@ -8,8 +8,9 @@
     <p>descricao: {{ object.descricao }}</p>
     <p>preço: R${{ object.preco }}</p>
     {% if object.disponibilidade %}
-        disponibilidade: sim
+        <p>disponibilidade: sim</p>
     {% else %}
-        disponibilidade: não
+        <p>disponibilidade: não</p>
     {% endif %}
+    <a href="{% url 'produtos:atualizar' object.slug %}">atualizar</a>
 {% endblock %}
