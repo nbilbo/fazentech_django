@@ -1,16 +1,52 @@
 {% extends 'blog/base.html' %}
-{% block head_title %} {{object.nome}} - Fazentech {% endblock %}
+{% load static %}
 
+<!-- css link -->
+{% block css_link %}
+    <link rel="stylesheet" type="text/css" href="{% static 'produtos/detalhe_produto.css' %}">
+{% endblock %}
+
+<!-- head title -->
+{% block head_title %} {{object.nome}} - Fazentech {% endblock %}
 
 <!--body-->
 {% block content %}
-    <p>produto: {{ object.nome }}</p>
-    <p>descricao: {{ object.descricao }}</p>
-    <p>preço: R${{ object.preco }}</p>
-    {% if object.disponibilidade %}
-        <p>disponibilidade: sim</p>
-    {% else %}
-        <p>disponibilidade: não</p>
-    {% endif %}
-    <a href="{% url 'produtos:atualizar' object.slug %}">atualizar</a>
+
+    <!--a href="{% url 'produtos:atualizar' object.slug %}">atualizar</a> -->
+
+<!-- nome do produto -->
+<header class="main-header">
+    <div class="container">
+        <h1 class="header-phrase">{{ object.nome }}</h1>
+    </div>
+</header>
+
+<!-- detalhes do produto -->
+<div class="container">
+    <ul class="info-list">
+        <li class="info-item">
+            {{ object.descricao }}
+        </li>
+
+        <li class="info-item">
+            R$ {{ object.preco }}
+        </li>
+
+        <li class="info-item">
+            {% if object.disponibilidade %}
+                disponivel
+            {% else %}
+                não disponivel
+            {% endif %}
+        </li>
+    </ul>
+</div>
+
+<!-- abrir formulario atualizar -->
+<div class="container">
+    <a href="{% url 'produtos:atualizar' object.slug %}" class="open-update-form">
+        editar
+    </a>
+</div>
+
 {% endblock %}

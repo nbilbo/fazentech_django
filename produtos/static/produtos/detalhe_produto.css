@@ -1,0 +1,28 @@
+/*detalhes do produto*/
+.info-list {
+
+}
+
+.info-item {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+    margin: 50px 0;
+    letter-spacing: 3px;
+}
+
+/*abrir formulario atualizar*/
+.open-update-form {
+	display: block;
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	background-color: #6F3B48;
+	color: #E5CCC8;
+	width: 150px;
+	padding: 5px;
+	margin: 50px auto;
+	border-radius: 5px;
+	letter-spacing: 3px;
+}
+
+

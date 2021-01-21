@@ -1,0 +1,39 @@
+/*lista de produtos*/
+.products-list {
+	margin: 0 auto;
+	background-color: #F3E4DF;
+	border: 5px solid #6F3B48;
+	border-radius: 5px;
+}
+
+.product-item {
+	text-align: center;
+	padding: 20px 0;
+}
+.product-item:nth-child(odd) {
+	background-color: #ECD7D2;
+}
+.product-item:hover {
+	background-color: #E5CCC8;
+}
+
+.product-link {
+	font-family: 'Lobster', cursive;
+	text-transform: capitalize;
+	letter-spacing: 5px;
+}
+
+/*abrir formulario adicionar produto*/
+.open-add-form {
+	display: block;
+	text-align: center;
+	font-family: 'Lobster', cursive;
+	background-color: #6F3B48;
+	color: #E5CCC8;
+	width: 150px;
+	padding: 5px;
+	margin: 50px auto;
+	border-radius: 5px;
+	letter-spacing: 3px;
+}
+

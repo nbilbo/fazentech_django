@@ -1,11 +1,32 @@
 {% extends 'blog/base.html' %}
-{% block head_title %} Editar - {{ produto.nome }} {% endblock %}
+{% load static %}
+
+<!-- css link -->
+{% block css_link %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'produtos/atualizar.css' %}">
+
+{% endblock %}
+
+<!-- head title  -->
+{% block head_title %} Atualizar {% endblock %}
 
 <!--body-->
 {% block content %}
+
+<header class="main-header">
+    <div class="container">
+        <h1 class="header-phrase">
+            atualizar {{ form.instance.nome }}
+        </h1>
+    </div>
+</header>
+
+<div class="container">
     <form action="" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="salvar">
     </form>
+</div>
 {% endblock %}

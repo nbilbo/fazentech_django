@@ -1,26 +1,47 @@
 {% load static %}
 
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="{% static 'blog/base.css' %}">
-		<title>{% block head_title %}Fazentech{% endblock %}</title>
-	</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<body>
-		<nav style="margin-bottom: 50px;">
-			<ul>
-				<li>
-					<a href="{% url 'blog:index' %}">fazentech</a>
-				</li>
+        <!-- fontes -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
-				<li>
-					<a href="{% url 'produtos:index' %}">produtos</a>
-				</li>
-			</ul>
-		</nav>
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/normalize.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/base.css' %}">
+        {% block css_link %}
+        {% endblock %}
+
+        <!--title-->
+        <title>{% block head_title %}Fazentech{% endblock %}</title>
+    </head>
+
+    <body>
+        <!--menu navegação-->
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="main-ul">
+                    <li class="main-item">
+                        <a href="{% url 'blog:index' %}" class="main-link">
+                            fazentech
+                        </a>
+                    </li>
+
+                    <li class="main-item">
+                        <a href="{% url 'produtos:index' %}" class="main-link">
+                            produtos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+		
 		{% block content %}
 		{% endblock %}
-	</body>
+    </body>
+
 </html>

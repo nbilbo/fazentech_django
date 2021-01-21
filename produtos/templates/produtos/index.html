@@ -1,18 +1,43 @@
 {% extends 'blog/base.html' %}
+{% load static %}
+
+<!--css links-->
+{% block css_link %}
+<link rel="stylesheet" type="text/css" href="{% static 'produtos/index.css' %}">
+{% endblock %}
+
+<!-- head title-->
 {% block head_title %}Produtos - Fazentech{% endblock %}
 
 <!--body-->
 {% block content %}
 
-    <!--link abrir formulario-->
-    <a href="{% url 'produtos:adicionar' %}">adicionar</a>
-    
-    <!--listando todos os produtos-->
-    <h2>Produtos</h2>
-    {% for produto in produtos %}
-        <p>
-            <a href="{{ produto.get_absolute_url }}">{{ produto.nome }}</a>
-        </p>
-    {% endfor %}
-    
+<!--boas vindas-->
+<header class="main-header">
+	<div class="container">
+		<h1 class="header-phrase">produtos</h1>
+	</div>
+</header>	
+
+<!-- formulario adicionar-->
+<div class="container">
+	<a href="{% url 'produtos:adicionar' %}" class="open-add-form">
+		adicionar
+	</a>
+</div>
+
+<!-- lista de produtos  -->
+<div class="container">
+	<ul class="products-list">
+
+		{% for produto in produtos %}
+			<li class="product-item">
+				<a href="{{ produto.get_absolute_url }}" class="product-link" target="">
+					{{ produto.nome }}
+				</a>
+			</li>
+		{% endfor %}
+
+	</ul>
+</div>
 {% endblock %}

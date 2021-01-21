@@ -1,11 +1,29 @@
 {% extends 'blog/base.html' %}
+{% load static %}
+
+<!-- css link -->
+{% block css_link %}
+<link rel="stylesheet" type="text/css" href="{% static 'produtos/adicionar.css' %}">
+{% endblock %}
+
+<!-- head title -->
 {% block head_title %} Adicionar Produto {% endblock %}
 
 <!--body-->
 {% block content %}
+
+<header class="main-header">
+    <div class="container">
+        <h1 class="header-phrase">Adicionar novo produto</h1>
+    </div>
+</header>
+
+<div class="container">
     <form action="" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="salvar">
     </form>
+</div>
+
 {% endblock %}
