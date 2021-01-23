@@ -15,3 +15,5 @@
 <strong>executar</strong> `python manage.py migrate` para criar as tabelas dos modelos.
 
 <strong>executar</strong> `python manage.py runserver` para inicializar o servidor.
+
+[site](https://demofazentech.herokuapp.com/)
