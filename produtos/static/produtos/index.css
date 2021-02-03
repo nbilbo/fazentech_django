@@ -37,3 +37,15 @@
 	letter-spacing: 3px;
 }
 
+/*barra de pesquisa*/
+#user-input {
+    display: block;
+	font-family: 'Lobster', cursive;
+    letter-spacing: 3px;
+    margin: 0 auto 50px auto;
+    padding: 5px;
+    border-radius: 5px;
+    line-height: 25px;
+}
+
+

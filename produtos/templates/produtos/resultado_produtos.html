@@ -1,0 +1,11 @@
+{% if produtos %}
+    <ul class="products-list">
+    {%for produto in produtos%}
+        <li class="product-item">
+           <a href="{{ produto.get_absolute_url }}" class="product-link">
+            {{ produto.nome }}
+           </a> 
+        </li>
+    {% endfor %}
+    </ul>
+{% endif %}

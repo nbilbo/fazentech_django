@@ -26,18 +26,17 @@
 	</a>
 </div>
 
-<!-- lista de produtos  -->
+<!--pesquisar pro produtos-->
 <div class="container">
-	<ul class="products-list">
-
-		{% for produto in produtos %}
-			<li class="product-item">
-				<a href="{{ produto.get_absolute_url }}" class="product-link" target="">
-					{{ produto.nome }}
-				</a>
-			</li>
-		{% endfor %}
-
-	</ul>
+    <input type="text" id="user-input" placeholder="pesquisar">
 </div>
+
+<!-- lista de produtos  -->
+<div class="container" id="replaceable-content">
+    {% include 'produtos/resultado_produtos.html' %}
+</div>
+
+
+<!--fim body-->
 {% endblock %}
+

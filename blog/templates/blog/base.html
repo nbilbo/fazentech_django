@@ -16,6 +16,9 @@
         {% block css_link %}
         {% endblock %}
 
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
         <!--title-->
         <title>{% block head_title %}Fazentech{% endblock %}</title>
     </head>
@@ -42,6 +45,9 @@
 		
 		{% block content %}
 		{% endblock %}
+
+
+        <script src="{% static 'produtos/main.js' %}"></script>
     </body>
 
 </html>
